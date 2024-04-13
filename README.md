@@ -1,2 +1,1 @@
-# TechBytes-2024
-Devopia Somaiya 2024 Hackathon
+# face_recognition_project
