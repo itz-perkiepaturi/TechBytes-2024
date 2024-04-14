@@ -1,0 +1,89 @@
+<div class="hero">
+      <ul>
+        <div class="first-two">
+          <li>
+            <div class="top-left">
+              <h1>Kindergarten</h1>
+            </div>
+          </li>
+          <li>
+            <div class="top-right">
+              <h1>
+                Primary School <br />
+                <h4>(Class 1 - Class 7)</h4>
+              </h1>
+            </div>
+          </li>
+        </div>
+        <div class="last-two">
+          <li>
+            <div class="bottom-left">
+              <h1>
+                Secondary School<br />
+                <h4>(Class 8 - Class 10)</h4>
+              </h1>
+            </div>
+          </li>
+          <li>
+            <div class="bottom-right">
+              <h1>
+                Higher Secondary School
+                <h4>(Class 11 - Class 12)</h4>
+              </h1>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+
+
+
+
+
+    
+
+    /* Hero */
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: 1fr 1fr; /* Two equal rows */
+    gap: 10px; /* Gap between grid items */
+    /* Optional: add padding or other styles */
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    /* border: 10px solid red; */
+    height: 80vh;
+}
+
+.hero li{
+    list-style-type: none;
+    color: black;
+}
+
+.first-two{
+    display: flex;
+    justify-content: space-around;
+    /* border: 10px solid red; */
+    width: 100vw;
+    margin-top: 100px;
+    border: 10px solid red;
+}
+
+.last-two{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 300px;
+    
+}
+
+.top-left{
+    border: 10px solid red;
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

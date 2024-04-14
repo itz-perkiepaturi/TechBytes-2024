@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #careers {
+      background-color: #f9f9f9;
+      padding: 50px 20px;
+    }
+
+    .careers-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .job-listings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .job-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .apply-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .apply-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <body>
+    <section id="careers">
+      <div class="careers-container">
+        <h2>Careers</h2>
+        <p>
+          We are looking for passionate and dedicated teachers to join our team!
+        </p>
+
+        <div class="job-listings">
+          <div class="job-card">
+            <h3>Primary School Teacher</h3>
+            <p>
+              We are seeking a qualified primary school teacher with experience
+              in teaching classes 1 to 7.
+            </p>
+            <button class="apply-btn">Apply Now</button>
+          </div>
+
+          <div class="job-card">
+            <h3>Secondary School Teacher</h3>
+            <p>
+              Looking for a skilled secondary school teacher to teach classes 8
+              to 10.
+            </p>
+            <button class="apply-btn">Apply Now</button>
+          </div>
+
+          <div class="job-card">
+            <h3>Higher Secondary School Teacher</h3>
+            <p>
+              If you have expertise in teaching classes 11 and 12, we want you
+              on our team!
+            </p>
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

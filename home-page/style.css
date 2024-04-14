@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+:root{
+    --primary: rgb(0,0,0,1.0);
+    --secondary:rgb(0,0,0,0.0);
+}
+
+body {
+    /* background-color:gray; */
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+}
+
+nav {
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    color: white;
+}
+
+.scrolled {
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-container ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+li {
+    margin-left: 30px;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    color: white;
+}
+
+li a {
+    text-decoration: none; /* Remove underline for anchor tags inside list items */
+    color: inherit; /* Inherit color from parent (white) */
+}
+
+.navbar-container img {
+    height: 50px;
+    filter: invert(100%);
+}
+
+.logo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo p{
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo p {
+    margin-left: 10px;
+    font-weight: 570;
+    font-style: oblique;
+    color: inherit; /* Inherit color from parent (white) */
+    text-decoration: none; /* Remove underline */
+}
+
+
+.content {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 5s ease-in-out;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    position: relative;
+    background-color: white; /* Set background color of main content to white */
+    color: black; /* Set text color to black for better visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    opacity: 0.8;
+    z-index: 1;
+}
+
+@keyframes animate {
+    0% {
+        background-image: url(./assets/school1.jpg);
+    }
+    20% {
+        background-image: url(./assets/school2.jpg);
+    }
+    40% {
+        background-image: url(./assets/school3.jpg);
+    }
+    60% {
+        background-image: url(./assets/school1.jpg);
+    }
+    80% {
+        background-image: url(./assets/school2.jpg);
+    }
+    100% {
+        background-image: url(./assets/school3.jpg);
+    }
+}
+
+.upar {
+    border-radius: 30%;
+    padding: 20px;
+    background-color: transparent;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.upar:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 72vh;
+    padding-top: 100px;
+    background-color: transparent;
+}
+
+.text-above-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    color: white; /* Set text color to white */
+    opacity: 0; /* Initially hide the text */
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional styles for the grid container and items */
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    border: 1px solid #999;
+    transition: transform 0.3s ease-in-out;
+    color: white; /* Set text color to white */
+}
+
+.top-left {
+    grid-area: 1 / 1 / 2 / 2;
+    background-image: url(./assets/kg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-text-stroke: 1px black;
+    cursor: pointer;
+}
+
+.top-right {
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url(./assets/primary.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-text-stroke: 1px black;
+    cursor: pointer;
+}
+
+.bottom-left {
+    grid-area: 2 / 1 / 3 / 2;
+    transform-origin: right;
+    background-image: url(./assets/secondary.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-text-stroke: 1px black;
+    cursor: pointer;
+}
+
+.bottom-right {
+    grid-area: 2 / 2 / 3 / 3;
+    transform-origin: left;
+    background-image: url(./assets/senior-sec.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-text-stroke: 1px black;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+/* Chatbot styling */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Change the background color as needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+}
