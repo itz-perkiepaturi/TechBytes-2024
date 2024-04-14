@@ -75,12 +75,19 @@ li a {
     cursor: pointer;
 }
 
+.logo p{
+    color: inherit;
+    text-decoration: none;
+}
+
 .logo p {
     margin-left: 10px;
     font-weight: 570;
     font-style: oblique;
-    color: white;
+    color: inherit; /* Inherit color from parent (white) */
+    text-decoration: none; /* Remove underline */
 }
+
 
 .content {
     height: 100vh;
@@ -249,3 +256,26 @@ li a {
     transform: scale(1.1);
 }
 
+/* Chatbot styling */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Change the background color as needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+}
