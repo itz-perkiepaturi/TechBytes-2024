@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="navbar-container">
-        <div class="logo">
-          <img src="./assets/logo.png" alt="logo" />
-          <p>TechBytes Learn</p>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="logo" />
+                <p>TechBytes Learn</p>
+            </div>
+            <ul>
+                <li><a href="./index.html"></a><h4>Home</h4></li>
+                <li><h4>About</h4></li>
+                <li><a href="./careers.html"><h4>Careers</h4></a></li>
+                <li><h4>Contact</h4></li>
+            </ul>
         </div>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Careers</li>
-          <li>Contact</li>
-        </ul>
-      </div>
     </nav>
     <main class="content">
       <div class="buttons-container">
-        <div class="sign-in-btn">
-          <input
-            type="button"
-            value="Sign-In"
-            class="upar"
-            style="cursor: pointer"
-          />
-        </div>
-        <div class="login-btn">
-          <input type="button" value="Log-In" class="upar" />
-        </div>
+          <div class="text-above-buttons">
+              <h2 id="welcomeText">Welcome to TechBytes Learn</h2>
+              <p id="descriptionText">Unlock a world of knowledge and opportunities!</p>
+          </div>
+          <div class="sign-in-btn">
+              <a href="./signup.html">
+                  <input type="button" value="Sign-In" class="upar" style="cursor: pointer" />
+              </a>
+          </div>
+          <div class="login-btn">
+              <a href="./signup.html">
+                  <input type="button" value="Log-In" class="upar" />
+              </a>
+          </div>
       </div>
-    </main>
+  </main>
 
-    <div class="hero">
-      <ul>
-        <div class="first-two">
-          <li>KG</li>
-          <li>Primary</li>
+    <div class="grid-container">
+        <div class="grid-item top-left">
+            <h1>Kindergarten</h1>
         </div>
-        <div class="last-two">
-          <li>Secondary</li>
-          <li>Higher Secondary</li>
+        <div class="grid-item top-right">
+            <h1>
+                Primary School <br />
+                (Class 1 - Class 7)
+            </h1>
         </div>
-      </ul>
+        <div class="grid-item bottom-left">
+            <h1>
+                Secondary School <br />
+                (Class 8 - Class 10)
+            </h1>
+        </div>
+        <div class="grid-item bottom-right">
+            <h1>
+                Higher Secondary School <br />
+                (Class 11 - Class 12)
+            </h1>
+        </div>
     </div>
 
     <footer></footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
